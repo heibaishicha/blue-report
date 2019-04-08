@@ -31,7 +31,7 @@ object SocketWindowWordCount {
     // 获取运行环境
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     // 连接此socket获取输入数据
-    val text = env.socketTextStream("192.168.23.161", port, '\n')
+    val text = env.socketTextStream("192.168.68.160", port, '\n')
     //需要加上这一行隐式转换 否则在调用flatmap方法的时候会报错
     import org.apache.flink.api.scala._
     // 解析数据, 分组, 窗口化, 并且聚合求SUM
